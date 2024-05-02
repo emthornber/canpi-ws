@@ -6,28 +6,27 @@
 ################################################################################
 
 export SDIR := ${shell pwd}
-export BFILE := "$(SDIR)/target/arm-unknown-linux-gnueabihf/release/canpi-ssr"
+export BFILE := "$(SDIR)/target/arm-unknown-linux-gnueabihf/release/canpi-ws"
 export ODIR := "$(SDIR)/package"
-
-SUBDIRS = package
 
 all: clean package
 
-.PHONY: all build clean release test $(SUBDIRS)
+.PHONY: all build clean config release test
 
 build:
-        cargo build
+	cargo build
 
 clean:
-        cargo clean
+	cargo clean
 
-$(SUBDIRS):
-        $(MAKE) -f $@/Makefile
+package: config release
+	$(MAKE) -f $@/Makefile
 
-package: release
+config:
+	$(MAKE) -C $@
 
 release:
-        cargo build --release
+	cargo build --release
 
 test:
-        cargo test
+	cargo test

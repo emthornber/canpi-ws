@@ -1,0 +1,18 @@
+{
+    "canws_trace": {
+        "prompt": "Enable Web Socket trace",
+        "tooltip": "Enter Y(es) or N(o)",
+        "current": "Y",
+        "default": "Y",
+        "format": "[Yy]|[Nn]",
+        "action": "Edit"
+    },
+    "canws_port": {
+        "prompt": "WebSocket port number",
+        "tooltip": "TCP port that the Web Socket service listens on",
+        "current": "8000",
+        "default": "8000",
+        "format": "[0-9]{4}",
+        "action": "Edit"
+    }
+}

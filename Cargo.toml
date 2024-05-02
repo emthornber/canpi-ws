@@ -11,6 +11,6 @@ repository = "https://github/emthornber/canpi-ws"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [[bin]]
 name = "canpi-ws"
-path = "arc/main.rs"
+path = "src/main.rs"
 
 [dependencies]
