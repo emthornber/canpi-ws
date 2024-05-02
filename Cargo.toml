@@ -1,0 +1,16 @@
+[package]
+name = "canpi-ws"
+version = "0.1.0"
+authors = ["Mark Thornber <mark.thornber@merg.org.uk"]
+edition = "2021"
+license = "GPL-3.0-or-later"
+readme = "README.md"
+description = "A communications adapter to present a WebSocket interface for CBus"
+repository = "https://github/emthornber/canpi-ws"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "canpi-ws"
+path = "arc/main.rs"
+
+[dependencies]
