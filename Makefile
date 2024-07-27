@@ -11,7 +11,7 @@ export ODIR := "$(SDIR)/package"
 
 all: clean package
 
-.PHONY: all build clean config release test
+.PHONY: all build clean config release run test
 
 build:
 	cargo build
@@ -27,6 +27,9 @@ config:
 
 release:
 	cargo build --release
+
+run:
+	cargo run
 
 test:
 	cargo test

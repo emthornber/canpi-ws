@@ -14,3 +14,16 @@ name = "canpi-ws"
 path = "src/main.rs"
 
 [dependencies]
+thiserror = "1.0.63"
+serde = { version = "1.0.203", features = ["derive"] }
+actix-web = "4.5.1"
+actix-web-actors = "4.3.0"
+actix = "0.13.3"
+uuid = { version = "1.8.0", features = ["v4", "serde"] }
+lazy_static = "1.5.0"
+dotenv = "0.15.0"
+simple_logger = "5.0.0"
+log = "0.4.22"
+time = "0.3.36"
+rust-ini = "0.21.0"
+strfmt = "0.2.4"

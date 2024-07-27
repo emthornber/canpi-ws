@@ -18,10 +18,11 @@ $home=/usr/local/etc/${target}
 $bindir=/usr/local/bin
 $logdir=/var/log/${target}
 $systemd=/usr/lib/systemd/system
+$srvdir=/etc/systemd/system/${target}.service.d
 # Sources
 $sysdir=${srcdir}/config
 
-%product WebSocket channel for canpi-server
+%product WebSocket channel to canpi-server
 %copyright 2024 MERG
 %vendor Enchanted Systems Limited
 %license LICENSE
@@ -43,6 +44,7 @@ d 755 root root ${home} -
 # canpi-ws daemon and service definition
 f 755 root root ${bindir}/${target} ${binary}
 f 644 root root ${systemd}/${SERVICE}  ${sysdir}/${SERVICE}
+f 644 root root ${srvdir}/${target}.conf ${sysdir}/${target}.conf
 
 # canpi-ws configuration files
 f 644 root root ${home}/${target}.cfg  ${sysdir}/${target}.cfg
